@@ -1,0 +1,92 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .conteudo {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    overflow: hidden;
+    background-image: url('../../../public/assets/greyfloral.jpeg');
+    background-repeat: repeat;
+  }
+  
+  .caixa-mensagem {
+    background-color: rgba(233, 227, 227, 0.678);
+    width: 100vw;
+    margin: 20px;
+  }
+  
+  .titulo {
+    font-family: "Cedarville Cursive", cursive;
+    font-weight: 600;
+    color: rgb(74, 79, 83);
+    font-size: 2rem;
+    text-align: center;
+    line-height: 1;
+    margin-top: 24px;
+  }
+  
+  .imagem-casa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagem-casa img {
+    width: 8rem;
+  }
+  
+  .subtitulo {
+    font-size: 1.3rem;
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .texto, .data-hora-local {
+    font-family: "Zen Kaku Gothic New", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: rgb(74, 79, 83);
+    text-align: justify;
+    padding: 12px;
+  }
+  
+  .data-hora-local {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+  }
+  
+  .calendario, .pin, .relogio {
+    height: 1rem;
+  }
+  
+  .presente {
+    height: 35px;
+     
+  }
+  
+  .icon img {
+    margin-right: 12px;
+  }
+  
+  .bot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+  }
+  
+  .botao-bege-rosado {
+    background-color: #f5c5b8 !important;
+  }
+  
+  .botao-bege-rosado:hover {
+    background-color: #e0b49a; 
+  }
+  
