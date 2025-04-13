@@ -1,92 +1,202 @@
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
-  
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.conteudo {
+  height: 100VH;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../public/assets/greyfloral.jpeg");
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: top left;
+  box-sizing: border-box;
+  padding: 8vw; 
+}
+
+.caixa-mensagem {
+  background-color: rgba(233, 227, 227, 0.678);
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  max-height: 100%;
+  box-sizing: border-box;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.topo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.titulo {
+  font-family: "Cedarville Cursive", cursive;
+  font-weight: 600;
+  color: rgb(74, 79, 83);
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  text-align: center;
+  margin: 0;
+  line-height: 1.1;
+}
+
+.imagem-casa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 0 16px 0;
+}
+
+.imagem-casa img {
+  width: clamp(6rem, 25vw, 12rem);
+}
+
+.subtitulo {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  margin: 0;
+}
+
+.texto,
+.data-hora-local {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: rgb(74, 79, 83);
+  text-align: center;
+  margin: 4px 0;
+  padding: 0 12px;
+}
+
+.data-hora-local {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calendario,
+.pin,
+.relogio {
+  height: 1rem;
+}
+
+.presente {
+  height: 30px;
+}
+
+.icon img {
+  margin-right: 8px;
+}
+
+.bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+}
+
+.botao-bege-rosado {
+  background-color: #f5c5b8 !important;
+  font-size: clamp(0.9rem, 2vw, 1.2rem) !important;
+  padding: 12px 20px !important;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  min-width: 200px;
+}
+
+.botao-bege-rosado:hover {
+  background-color: #e0b49a;
+}
+
+/* iPhone SE e dispositivos bem pequenos */
+@media (max-width: 375px) {
   .conteudo {
-    width: 100%;
     height: 100vh;
     display: flex;
-    overflow: hidden;
-    background-image: url('../../../public/assets/greyfloral.jpeg');
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../public/assets/greyfloral.jpeg");
     background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+    box-sizing: border-box;
+    padding: 5vw; 
   }
-  
-  .caixa-mensagem {
-    background-color: rgba(233, 227, 227, 0.678);
-    width: 100vw;
-    margin: 20px;
+  .titulo {
+    font-size: 1.5rem !important;
+  }
+
+  .imagem-casa img {
+    width: 5rem !important;
+  }
+
+  .subtitulo {
+    font-size: 1.5rem !important;
+  }
+
+  .texto {
+    font-size: 1rem !important;
+  }
+
+  .botao-bege-rosado {
+    font-size: 1rem !important;
+    padding: 8px 8px !important;
+    min-width: 180px !important;
+  }
+}
+
+/* Telas grandes */
+@media (min-width: 1024px) {
+  .conteudo {
+    min-height: 100vh; /* Garantir que o conteúdo ocupe toda a altura da tela */
+    display: flex;
+    flex-direction: column; /* Organizar os itens verticalmente */
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../public/assets/greyfloral.jpeg");
+    background-repeat: repeat;
+    background-size: auto;
+    background-position: top left;
+    box-sizing: border-box;
+    padding: 1vw; /* Ajuste o padding para não ultrapassar a tela */
+    overflow: hidden; /* Impedir que apareça rolagem */
   }
   
   .titulo {
-    font-family: "Cedarville Cursive", cursive;
-    font-weight: 600;
-    color: rgb(74, 79, 83);
-    font-size: 2rem;
-    text-align: center;
-    line-height: 1;
-    margin-top: 24px;
+    font-size: 4vw; /* Tamanho dinâmico baseado na largura da tela */
   }
-  
-  .imagem-casa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .imagem-casa img {
-    width: 8rem;
-  }
-  
-  .subtitulo {
-    font-size: 1.3rem;
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    text-align: center;
-  }
-  
-  .texto, .data-hora-local {
-    font-family: "Zen Kaku Gothic New", sans-serif;
-    font-weight: 400;
-    font-size: 0.9rem;
-    color: rgb(74, 79, 83);
-    text-align: justify;
-    padding: 12px;
-  }
-  
-  .data-hora-local {
-    display: flex;
-    gap: 8px;
-    flex-direction: column;
-  }
-  
-  .calendario, .pin, .relogio {
-    height: 1rem;
-  }
-  
-  .presente {
-    height: 35px;
-     
-  }
-  
-  .icon img {
-    margin-right: 12px;
-  }
-  
-  .bot {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
 
+  .imagem-casa img {
+    width: 8rem; /* Ajuste o tamanho da imagem */
   }
-  
+
+  .subtitulo {
+    font-size: 2.5vw; /* Tamanho dinâmico */
+  }
+
+  .texto {
+    font-size: 1.3vw; /* Tamanho dinâmico */
+  }
+
   .botao-bege-rosado {
-    background-color: #f5c5b8 !important;
+    font-size: 1.3rem;
+    padding: 14px 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  
-  .botao-bege-rosado:hover {
-    background-color: #e0b49a; 
-  }
-  
+
+}
