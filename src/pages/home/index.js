@@ -40,7 +40,7 @@ function Home() {
           </div>
           <div className="icon">
             <img className="relogio" src="assets/clock.png" alt="Relógio" />
-            15:00
+            13:00
           </div>
           <div className="icon">
             <img className="pin" src="assets/pin.png" alt="Localização" />
